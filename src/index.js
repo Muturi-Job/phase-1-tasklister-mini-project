@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   )
 });
 function buildToDo(todo){
-  let p = document.createElement('p');
-  p.textContent = todo  
+  let description = document.createElement('li');
+  description.textContent = todo  
   let btn= document.createElement('button');
   btn.addEventListener('click', handleDelete)
-  p.appendChild(btn)  
+  description.appendChild(btn)  
   btn.textContent = ' x '
-  document.querySelector('#tasks').appendChild(p)
+  document.querySelector('#tasks').appendChild(description)
 
 }
 function handleDelete (e) {
